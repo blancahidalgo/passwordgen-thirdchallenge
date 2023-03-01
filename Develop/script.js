@@ -15,29 +15,28 @@
  var generatePassword
 
  // This is hte event listener
- generateBtn.addEventListener("click", generatePassword);
+ generateBtn.addEventListener("click", writePassword);
 
  function confirmGenerate() {
-  var generatePassword 
   if (confirm("Do you want to generate a secure password? - Click to go ahead") === true) {
     console.log("Process started!");
   } // ^^^^ will print to console
-    
+} 
 
 //all password criteria below within the generate password
 
- function confirmGenerate() {}
+ function writePassword() {
  // 1. Password Length
  var passwordLength = prompt("Your new password should contain between 8 - 128 characters. How many would you like?");
 //error null if chose outside those parameters ^^
  if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
   alert("Not valid - please choose a number between 8 - 128");
-  prompt("Password Length: select a number between 8-128");
+  passwordLength = prompt("Password Length: select a number between 8-128");
  }
 
 // accepts and prints the console 
 if (passwordLength > 8 || passwordLength < 128 || 
-  (passwordLength) === true) {
+    (passwordLength) === true) {
     console.log(passwordLength);
     alert("You have selected a password length of "  + passwordLength + "  characters");
     //include numbers 
@@ -49,7 +48,7 @@ if (passwordLength > 8 || passwordLength < 128 ||
     //include lowerCase
     var includelowerCase = confirm("Would you like any special lower case letters? Click 'OK' or 'CANCEL'"); 
 
-  if (!includeNum && !includeSpecialChar && !includeUppercase && !includelowercase) {
+  if (!includeNum && !includeSpecialChar && !includeupperCase && !includelowerCase) {
     return alert("Not valid - choose one character of each type at least to proceed");
   }
   } else {
@@ -77,5 +76,7 @@ if (passwordLength > 8 || passwordLength < 128 ||
   console.log(retVal);
   }
 
-  return retVal;
- }
+  var passwordText = document.querySelector("#password");
+  passwordText.value = retVal;
+  }
+ 

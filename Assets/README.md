@@ -14,3 +14,4 @@ The criteria is:
 
 Once they press okay via the prompts, the password generator succesfully generates and displays a secure password. 
 
+![alt text](Assets/Images/image2-challenge.png)
